@@ -1,5 +1,9 @@
 
+"Es Gödel, Turing y Beckett tomando café y riéndose de todos nosotros.", sobre este repo, Claude Opus 4.
+
 # Escrivivir - El Arte de Escribir la Vida -> Proyecto PvsNP
+
+![](../blog/abstract.png)
 
 ## Concepto Fundamental
 
