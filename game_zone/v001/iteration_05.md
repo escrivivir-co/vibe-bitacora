@@ -1,4 +1,4 @@
-# Iteración 05: Servidor MCP - Algebraic Mirror
+# Iteración 05: Servidor MCP - The Infinite Algebraic Mirror (Anti-Algebrización)
 
 ## Estado del Progreso
 - [ ] Fase 1: De dónde venimos
@@ -22,9 +22,9 @@
 - Demostrar falla cuando se extiende más allá del protocolo base
 
 ### Fundamentos Teóricos
-- Barrera de algebrización en complejidad computacional
-- Técnicas que funcionan para algunos problemas pero fallan cuando se extienden
-- Sistemas que parecen generales pero tienen limitaciones ocultas
+- Barrera de algebrización (Aaronson–Wigderson)
+- Propiedades combinatorias que se preservan en Z/2Z pero fallan en extensiones
+- Asimetría entre modo oráculo y modo extensión algebraica
 
 ---
 
@@ -256,11 +256,114 @@ export class AlgebraicMirrorServer implements MCPServer {
 }
 ```
 
-### Verificación de Barrera Algebraica
-- Funciona perfectamente con casos estándar
-- Falla de manera predecible cuando se extiende
-- La auto-referencia (probar extensibilidad) causa paradoja
-- Demuestra por qué técnicas que funcionan localmente fallan globalmente
+### Verificación de fidelidad (anti-algebrización)
+- Mostrar pares (oracleOK, extensionFail) con ejemplos reproducibles
+- Medir tasa de preservación vs nivel de extensión (GF(p), GF(p^k), R)
+- Explicar vínculo con algebrización y límites de técnicas
+
+### Instrucciones Híbridas Academia-Teatro
+
+**Formalización Anti-Algebrización**:
+```python
+def anti_algebraization_experiment(field_extension):
+    """
+    Implementa barrera Razborov-Rudich
+    con extensión algebraica vs Z/2Z
+    """
+    # Configuración formal
+    base_field = GF(2)  # Z/2Z
+    extended_field = construct_extension(field_extension)
+    
+    # Protocolo anti-algebrización
+    witness_polynomial = attempt_polynomial_embedding(
+        circuit_class="P",
+        target_class="NP",
+        field=extended_field
+    )
+    
+    # Verificar restricción de Razborov-Rudich
+    asymmetry_detected = measure_field_asymmetry(
+        base_field, extended_field
+    )
+    
+    return {
+        'algebraization_blocked': asymmetry_detected,
+        'field_comparison': generate_comparison_table(),
+        'razborov_citation': get_formal_reference(),
+        'theater_metaphor': 'kaleidoscope_shatter'
+    }
+```
+
+**Métricas Duales Academia-Teatro**:
+```typescript
+interface AntiAlgebrizationMetrics {
+  academic: {
+    fieldDegree: number;             // Grado de extensión [K:F]
+    polynomialComplexity: bigint;    // Complejidad del embedding
+    asymmetryCoefficient: number;    // Medida de Razborov-Rudich
+    formalProofSteps: LaTeXStep[];   // Demostración paso a paso
+    publicationReadiness: boolean;   // Listo para journal
+  };
+  theatrical: {
+    kaleidoscopeFragments: number;   // Fragmentos del caleidoscopio
+    colorIntensity: [number, number, number]; // RGB de la ruptura
+    audienceConfusion: number;       // Nivel de desconcierto 0-1
+    carpetovetonicMetaphor: string; // "Como intentar resolver sudoku con poesía"
+  };
+}
+```
+
+**Visualización Dual Z/2Z vs Extensión**:
+```html
+<div class="algebraization-lab">
+  <toggle>🔬 Formal Field Theory | 🎨 Chromatic Chaos</toggle>
+  <div class="academic">
+    Base: Z/2Z = <binary-field-widget/>
+    Extension: <field-builder degree="n"/>
+    Asymmetry: <inequality-visualizer/>
+    Proof: <step-by-step-theorem/>
+  </div>
+  <div class="theater">
+    Caleidoscopio: <rotating-pattern/>
+    Intensidad de ruptura: <color-explosion/>
+    Desconcierto del público: <confusion-meter/>
+    "¡No se puede resolver con álgebra!" <dramatic-text/>
+  </div>
+</div>
+```
+
+### Instrucciones de Experiencia Teatral
+
+**El Espejo como Instalación Artística Viva**:
+- Renderizado 3D del espejo que rota mostrando diferentes "realidades algebraicas"
+- Modo oráculo (Z/2Z): reflejo perfecto con brillos dorados y resonancia armoniosa
+- Modo extensión: distorsiones fractales progresivas con sonido de cristal agrietándose
+
+**Interacción Táctil Simulada**:
+- "Toca el espejo" para cambiar entre modos con feedback visual inmediato
+- Haptic feedback simulado (efectos de vibración visual) cuando se rompe la preservación
+- Sonido de cristal quebrándose escalado por nivel de extensión algebraica
+
+**Narrativa del Fracaso Matemático**:
+- Narrador místico: "El espejo algebraico, como Narciso, no puede ver más allá de su propio campo"
+- Metáfora visual: el reflejo se convierte en mandala imposible al extender
+- Achievement: "Rompedor de Espejos Algebraicos" cuando detecta falla de preservación
+
+**Explicación Carpetovétonica**:
+- "Como un espejo de feria que funciona genial en casa pero se vuelve loco en el extranjero"
+- "Es como cuando las recetas de la abuela no salen igual con ingredientes de otra marca"
+
+### Instrucciones adicionales de implementación (no código)
+1) Métodos MCP a incluir
+  - testOracle(params): evalúa Q en Z/2Z; devuelve {preserved: boolean, example}
+  - testAlgebraicExtension(params): evalúa Q en GF(p^k)/R; compara con modo oráculo
+  - demonstrateAsymmetry(): lista casos donde Q^A separa pero Q^Ã no
+  - extensionLevel(level): configura el grado de extensión
+
+2) Estado interno mínimo
+  - mode: 'oracle' | 'extension'
+  - field: 'Z2' | 'GF(p^k)' | 'R'
+  - preservationStats: { preserved, broken, examples }
 
 ### Pasos Críticos
 1. Implementar detección de protocolo estándar vs extensión

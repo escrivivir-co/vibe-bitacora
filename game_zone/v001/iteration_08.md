@@ -16,6 +16,145 @@
 - Sistema completo de backend operativo (servidores, juegos, runtime)
 - Necesidad de interfaz visual para que usuarios experimenten el teatro
 
+### Instrucciones Híbridas Academia-Teatro
+
+**UI Dual Académica-Teatral**:
+```typescript
+interface TeatroUIArchitecture {
+  academic: {
+    proofVisualization: {
+      constructivityProver: ReactComponent; // Probador de constructividad
+      timelineContradiction: ReactComponent; // Visualizador de contradicciones
+      fieldAsymmetryChart: ReactComponent;  // Gráfico de asimetría de campos
+    };
+    rigourMetrics: {
+      citationAccuracy: number;            // Precisión en citas 0-1
+      mathematicalSoundness: boolean;      // Solidez matemática
+      formalVerificationStatus: string;    // Estado de verificación
+    };
+    publicationTools: {
+      latexExporter: (proof: Proof) => string; // Exportador LaTeX
+      citationManager: CitationDatabase;       // Gestor de citas
+      peerReviewMode: boolean;                 // Modo revisión por pares
+    };
+  };
+  theatrical: {
+    stageDesign: {
+      backgroundPalette: RGBColor[];       // Paleta de colores de fondo
+      particleEffects: ParticleSystem[];   // Sistemas de partículas
+      illuminationController: LightRig;    // Control de iluminación
+    };
+    audienceInteraction: {
+      votingSystem: VotingInterface;       // Sistema de votación
+      chatboxDramatic: ChatComponent;      // Chat con drama
+      socialSharing: SocialAPI;           // Compartir en redes
+    };
+    narrativeElements: {
+      characterDialogue: DialogueTree;     // Diálogos de personajes
+      plotProgression: StoryArc;          // Progresión de la trama
+      memeGeneration: MemeFactory;        // Fábrica de memes
+    };
+  };
+}
+```
+
+**Componentes Híbridos React**:
+```jsx
+const DualModeComponent = ({ mode = 'hybrid' }) => {
+  const [academicMode, setAcademicMode] = useState(mode === 'academic');
+  const [theatricalMode, setTheatricalMode] = useState(mode === 'theatrical');
+  
+  return (
+    <div className="dual-interface">
+      <ModeToggle 
+        academic={academicMode}
+        theatrical={theatricalMode}
+        onToggle={(newMode) => {
+          if (newMode === 'hybrid') {
+            setAcademicMode(true);
+            setTheatricalMode(true);
+          } else if (newMode === 'academic') {
+            setAcademicMode(true);
+            setTheatricalMode(false);
+          } else {
+            setAcademicMode(false);
+            setTheatricalMode(true);
+          }
+        }}
+      />
+      
+      {academicMode && (
+        <AcademicInterface>
+          <ProofBuilder />
+          <CitationPanel />
+          <VerificationStatus />
+        </AcademicInterface>
+      )}
+      
+      {theatricalMode && (
+        <TheatricalInterface>
+          <StageVisualization />
+          <AudienceParticipation />
+          <DramaticEffects />
+        </TheatricalInterface>
+      )}
+    </div>
+  );
+};
+```
+
+**CSS Responsivo Dual**:
+```css
+/* Base híbrida */
+.teatro-ui {
+  --academic-primary: #1a237e;
+  --academic-secondary: #3949ab;
+  --theatrical-primary: #d32f2f;
+  --theatrical-secondary: #f44336;
+  --hybrid-gradient: linear-gradient(45deg, var(--academic-primary), var(--theatrical-primary));
+}
+
+/* Modo académico */
+.academic-mode {
+  font-family: 'Computer Modern', serif;
+  color: var(--academic-primary);
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.academic-mode .proof-panel {
+  border: 2px solid var(--academic-secondary);
+  background: white;
+  box-shadow: 0 2px 8px rgba(26, 35, 126, 0.1);
+}
+
+/* Modo teatral */
+.theatrical-mode {
+  font-family: 'Playfair Display', serif;
+  color: var(--theatrical-primary);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c1810 100%);
+  transition: all 0.3s ease;
+}
+
+.theatrical-mode .stage-panel {
+  border: 2px solid var(--theatrical-secondary);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(244, 67, 54, 0.3);
+}
+
+/* Modo híbrido */
+.hybrid-mode {
+  background: var(--hybrid-gradient);
+  color: white;
+}
+
+.hybrid-mode .split-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+```
+
 ### Limitaciones Identificadas
 - Sistema funciona pero solo por línea de comandos
 - Las paradojas son conceptualmente complejas y necesitan visualización
@@ -74,6 +213,61 @@ Opción A: Consola de texto enriquecida con visualizaciones ASCII artísticas, e
 ## Fase 4: Vamos (Ejecución)
 
 ### Desarrollo de TeatroUI Base
+
+```typescript
+// teatro-computacional/ui/teatro-ui.ts
+export class TeatroUI {
+  private runtime: TeatroRuntime;
+  private currentShows: Map<string, ShowDisplay> = new Map();
+  private paradoxMeter: ParadoxMeter;
+  private audienceParticipation: AudienceDisplay;
+  
+  constructor(runtime: TeatroRuntime) {
+    this.runtime = runtime;
+    this.paradoxMeter = new ParadoxMeter();
+    this.audienceParticipation = new AudienceDisplay();
+    this.initializeDisplays();
+  }
+
+  async startTheatre(): Promise<void> {
+    console.clear();
+    this.showTheaterHeader();
+    
+    await this.runtime.startTheatre();
+    
+    // Configurar displays en tiempo real
+    this.setupRealTimeDisplays();
+    
+    // Comenzar la función
+    await this.showOpeningCeremony();
+    await this.presentMainShows();
+    await this.showClosingCeremony();
+  }
+```
+
+### Elementos de Show en la UI Teatralizada
+
+**Stage Manager Virtual**:
+- Avatar 3D del "Director de Teatro" que presenta cada show con gestos dramáticos
+- Comentarios en vivo sobre progreso: "¡Bravo! Has dominado la densidad cuasi-natural"
+- Aplausos y reacciones de audiencia virtual con emojis flotantes y efectos sonoros
+
+**Visualizaciones Cinematográficas**:
+- Transiciones de cámara dramáticas entre shows con efectos de fundido y zoom
+- Sistema de iluminación teatral que cambia según el estado emocional de cada paradoja
+- Modo "Director's Cut" con pausas para comentarios del creador sobre cada momento clave
+
+**Elementos de Programa de TV/Teatro**:
+- "Previously on P vs NP..." resúmenes con voz narrativa misteriosa
+- Teasers del próximo show con música épica y efectos visuales anticipatorios  
+- Credits finales con "bloopers" matemáticos y momentos divertidos del desarrollo
+
+**Participación de Audiencia Gamificada**:
+- Chat en vivo simulado con reacciones automáticas: "😱 ¡No puede ser!" cuando ocurren paradojas
+- Votaciones en tiempo real sobre qué hipótesis sobrevivirán
+- Sistema de badges teatrales: "Testigo del Colapso", "Rompedor de Espejos", "Maestro de Densidades"
+
+### Renderizado Teatral de Conceptos Matemáticos
 
 ```typescript
 // teatro-computacional/ui/teatro-ui.ts

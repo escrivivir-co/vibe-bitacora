@@ -40,3 +40,5 @@ El objetivo final de este proyecto es contribuir al entendimiento del problema P
 El objetivo final de este proyecto es contribuir al entendimiento del problema P vs NP a través de un enfoque sistemático y documentado, facilitando la exploración de nuevas ideas y enfoques en la teoría de la complejidad computacional.
 
 ![](./blog/footer.png)
+
+![](./blog/footer2.png)

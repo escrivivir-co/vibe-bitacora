@@ -1,4 +1,3 @@
-
 # PLAN MAESTRO: Teatro Computacional P vs NP
 ## Implementación de "The Illusion Trilogy" mediante state-machine-mcp-driver
 
@@ -43,6 +42,68 @@ Teatro Computacional
 └── Interactive Frontend (Audiencia Participativa)
 ```
 
+### TEATRO Y CIENCIA EN SIMBIOSIS: Mapeo Matemático-Teatral
+
+Esta sección fusiona rigor matemático con experiencia teatral, creando un Teatro Computacional donde cada concepto se vive como espectáculo.
+
+#### **Show 1: "The Box That Sees" - "Unveil the Invisible, Witness the Impossible"**
+
+**Narrativa Teatral**: Un mago-matemático presenta una caja misteriosa de cristal con 32 tarjetas luminosas que brillan según su "aura cuasi-natural"
+
+- **Rigor**: Densidad 2^(-q(n)) medida con precisión sobre truth tables sintéticas
+- **Teatro**: Las tarjetas cambian de color (dorado="no-natural", rojo="demasiado natural")  
+- **Experiencia**: Slider mágico para ajustar q(n) con feedback: "¡Demasiado natural! Los PRGs te detectarán"
+- **Carpetovétonica**: "Como separar el trigo de la paja, pero con matemáticas que brillan"
+
+#### **Show 2: "The Recursive Mirage" - "Where Logic Becomes Light"** 
+
+**Narrativa Teatral**: Un espejismo digital que materializa el algoritmo SAT ultra-rápido como fuegos artificiales hasta auto-destruirse
+
+- **Rigor**: Pipeline δ→ε con Easy Witness Lemma y detección precisa de violación temporal  
+- **Teatro**: Timeline dramático con música épica, cuenta regresiva hacia contradicción
+- **Experiencia**: Votación en vivo "¿Sobrevivirá esta hipótesis?" + explosión visual al colapsar
+- **Carpetovétonica**: "Como el WhatsApp que se envía mensajes a sí mismo hasta explotar"
+
+#### **Show 3: "The Infinite Algebraic Mirror" - "Reflecting Reality, Breaking Algebra"**
+
+**Narrativa Teatral**: Un espejo gigante que refleja perfectamente en Z/2Z pero se fractura en extensiones algebraicas
+
+- **Rigor**: Evaluación dual oráculo/extensión con casos de preservación/ruptura documentados
+- **Teatro**: Espejo 3D que rota entre "realidades", agrietándose progresivamente  
+- **Experiencia**: "Toca el espejo" para cambiar modos + sonido de cristal al romperse
+- **Carpetovétonica**: "Como un espejo de feria que funciona en casa pero no en el extranjero"
+
+- Concepto: Densidad 2^(-q(n)) de propiedades cuasi-naturales  
+  Implementación: Contadores y muestreo sobre truth tables/sintéticos; verificación de umbrales configurables  
+  Experiencia: Indicador visual “Natural ↔ No-Natural” y mensajes pedagógicos
+
+- Concepto: Easy Witness Lemma y reducción algorítmica de Williams  
+  Implementación: Pipeline de suposición→construcción de SAT rápido→detección de violación de jerarquía temporal  
+  Experiencia: Línea de tiempo de construcción/contradicción y “momento aha” al detectar la violación
+
+- Concepto: Falla bajo algebrización (Z/2Z vs extensiones)  
+  Implementación: Modo dual de evaluación (oráculo vs extensión algebraica) con pruebas de preservación/ruptura de propiedades  
+  Experiencia: “Espejo” que funciona en modo oráculo y se “agrieta” al extender
+
+#### **Arquitectura de Doble Visión Teatralizada**
+
+**Motor Genérico (Reutilizable)**:
+- StateGraph teatral con iluminación y música por estado
+- Sistema de achievements: "Aprendiz de Mago" → "Maestro de Paradojas" → "Gurú de P vs NP"  
+- UI cinematográfica con transiciones de cámara dramáticas
+- NPCs guía: El Matemático Loco, La Audiencia Virtual, El Crítico Escéptico
+
+**Lógica Específica por Show (Enchufable)**:
+- Oráculo de densidad con efectos sonoros (campanillas/gong) (Show 1)
+- Detector de colapso temporal con animaciones de ondas (Show 2)  
+- Validador de preservación algebraica con haptic feedback (Show 3)
+
+#### **Sistema de Gamificación Teatral**
+
+- **Puntos "Paradox Points"**: Se ganan por descubrir paradojas y momentos eureka
+- **Progresión Narrativa**: Tutorial como "ritual de iniciación", fallos como "resistencia del universo"
+- **Elementos Audiovisuales**: Música que intensifica con complejidad, efectos que representan conceptos abstractos
+
 ---
 
 ## 🎪 DISEÑO DE LOS ESPECTÁCULOS
@@ -50,7 +111,9 @@ Teatro Computacional
 ### **Show 1: "The Box That Sees"** 
 *Propiedad de Discriminación Cuasi-Natural*
 
-**Concepto**: Una caja misteriosa que clasifica funciones como "fáciles" o "difíciles", siendo ella misma eficientemente computable.
+**Concepto Teatral**: Una caja misteriosa de cristal que "ve" el alma matemática de las funciones, clasificándolas mientras sus tarjetas brillan con auras de colores imposibles.
+
+**Momento Climático**: Cuando la audiencia ajusta el parámetro q(n) y las tarjetas cambian de rojo (natural) a dorado (cuasi-natural), evitando los "demonios PRG".
 
 **Implementación Técnica**:
 - **StateGraph**: Estados representan diferentes funciones booleanas
@@ -58,20 +121,17 @@ Teatro Computacional
 - **Interacción**: Público propone funciones, la caja las clasifica en tiempo real
 - **Paradoja**: La propiedad discriminadora evita PRGs pero mantiene utilidad
 
-**Componentes MCP**:
-```typescript
-interface DiscriminationBox extends MCPTool {
-  name: "discrimination_oracle";
-  density: number; // < 2^(-n^(o(1)))
-  classify(func: BooleanFunction): "easy" | "hard";
-  proofOfNonNaturality(): BarrierEvidence;
-}
-```
+Instrucciones de fidelidad matemática:
+- Implementar medición de densidad configurable 2^(-q(n)) evitando largeness natural
+- Asegurar constructividad sobre tablas de verdad sintetizadas
+- Proveer evidencia de no-naturalidad (explicar por qué evita PRGs pero mantiene utilidad)
 
 ### **Show 2: "The Recursive Mirage"**
 *Método Algorítmico de Williams*
 
-**Concepto**: Un espejismo que se auto-refuta cuando intentas atraparlo, demostrando que ciertas hipótesis computacionales son inherentemente contradictorias.
+**Concepto Teatral**: Un espejismo digital que materializa algoritmos SAT como fuegos artificiales de lógica pura, hasta que la contradicción temporal los hace colapsar en una explosión de luz.
+
+**Momento Climático**: La cuenta regresiva épica hacia la violación de jerarquía, con la audiencia votando si la hipótesis sobrevivirá.
 
 **Implementación Técnica**:
 - **StateGraph**: Ciclo recursivo que simula la reducción de Williams
@@ -79,20 +139,17 @@ interface DiscriminationBox extends MCPTool {
 - **Interacción**: Audiencia propone hipótesis, el sistema las refuta automáticamente
 - **Paradoja**: NEXP ⊆ SIZE(2^(n^δ)) → contradicción temporal
 
-**Componentes MCP**:
-```typescript
-interface RecursiveMirage extends MCPTool {
-  name: "williams_refutation";
-  hypothesis: "NEXP_small_circuits";
-  constructSATAlgorithm(): Algorithm;
-  detectContradiction(): TemporalHierarchyViolation;
-}
-```
+Instrucciones de fidelidad matemática:
+- Modelar la hipótesis “NEXP tiene circuitos pequeños” como estado inicial
+- Secuenciar construcción de SAT rápido y verificar violación de jerarquía temporal
+- Explicitar el rol del Easy Witness Lemma en la narrativa del show
 
 ### **Show 3: "The Infinite Algebraic Mirror"**
 *Construcción Combinatoria Anti-Algebrizante*
 
-**Concepto**: Un espejo que funciona universalmente con oráculos pero falla sistemáticamente con extensiones algebraicas.
+**Concepto Teatral**: Un espejo gigante que refleja la realidad matemática perfectamente en Z/2Z, pero se fractura en patrones imposibles cuando intenta reflejar extensiones algebraicas.
+
+**Momento Climático**: El espejo se agrieta visualmente con sonido de cristal quebrándose, mientras la audiencia "toca" diferentes modos y ve cómo la propiedad se preserva o se rompe.
 
 **Implementación Técnica**:
 - **StateGraph**: Estados duales (oráculos vs extensiones algebraicas)
@@ -100,15 +157,10 @@ interface RecursiveMirage extends MCPTool {
 - **Interacción**: Público experimenta con diferentes oráculos y extensiones
 - **Paradoja**: Funcionamiento universal que oculta fallas algebraicas
 
-**Componentes MCP**:
-```typescript
-interface AlgebraicMirror extends MCPTool {
-  name: "anti_algebrizing_property";
-  testOracle(oracle: Oracle): boolean;
-  testAlgebraicExtension(extension: AlgebraicExtension): boolean;
-  demonstrateAsymmetry(): AlgebrizationFailure;
-}
-```
+Instrucciones de fidelidad matemática:
+- Probar propiedades en modo oráculo (Z/2Z) y luego en extensiones algebraicas
+- Mostrar explícitamente los casos en que la propiedad no se preserva
+- Documentar la asimetría y su relación con algebrización
 
 ---
 
@@ -1191,3 +1243,48 @@ La estructura está preparada con:
 Cada iteración está diseñada para ser manejable (aprox. 2 horas) y construye sobre la anterior. Las fases dentro de cada iteración (20-25 minutos cada una) permiten progreso incremental y checkpoints claros.
 
 ¿Comenzamos con la Iteración 01? El análisis del core es fundamental para todo lo demás.
+
+### SECCIÓN AMPLIADA: Formalización Académica con Interfaz Lúdica
+
+#### **Modelo Dual de Presentación**
+
+Cada show mantiene DOS CAPAS simultáneas:
+
+**Capa A - Rigor Académico (para papers/conferencias)**:
+```
+Definición 1.1: Sea P una propiedad booleana con densidad μ(P) = |{x: P(x)=1}|/2^n
+Teorema: Si μ(P) ∈ [2^(-n^ε), 2^(-√n)] para ε>0 apropiado, entonces P evade PRGs
+Demostración: [Referencias a Razborov-Rudich con implementación verificable]
+```
+
+**Capa B - Experiencia Teatral (para público general)**:
+"Las tarjetas brillan doradas cuando encuentran el punto dulce matemático"
+
+#### **Artefactos Académicos Integrados**
+
+1. **Notebooks Jupyter Interactivos**:
+   - Células de teoría formal
+   - Visualizaciones animadas
+   - Código ejecutable que verifica teoremas
+   - "Modo paper" vs "Modo show"
+
+2. **Métricas Duales**:
+   ```typescript
+   interface DualMetrics {
+     academic: {
+       densityMeasured: number;      // μ(P) exacto
+       constructivityTime: bigint;    // Tiempo polinomial verificado
+       utilityCounterexamples: Set;  // Funciones en P/poly que fallan
+     };
+     theatrical: {
+       auraBrightness: number;        // Visualización del μ(P)
+       paradoxPoints: number;         // Gamificación
+       audienceGasps: number;         // Engagement
+     };
+   }
+   ```
+
+3. **Sistema de Referencias Cruzadas**:
+   - Cada elemento teatral → paper original
+   - Cada mecánica de juego → teorema formal
+   - Cada NPC → concepto matemático específico

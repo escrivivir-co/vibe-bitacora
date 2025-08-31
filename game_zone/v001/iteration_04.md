@@ -1,4 +1,4 @@
-# Iteración 04: Servidor MCP - Recursive Mirage
+# Iteración 04: Servidor MCP - The Recursive Mirage (Método Algorítmico de Williams)
 
 ## Estado del Progreso
 - [ ] Fase 1: De dónde venimos
@@ -22,22 +22,22 @@
 - Balance entre concepto matemático y implementación práctica
 
 ### Fundamentos Teóricos
-- Recursión infinita y auto-refutación
-- Teorema de incompletitud como inspiración
-- Sistemas que se niegan a sí mismos
+- Método de Williams: "NEXP ⊆ SIZE(2^(n^δ)) ⇒ SAT en 2^(n^{1-ε})" y contradicción con jerarquías de tiempo
+- Easy Witness Lemma: pasar de circuitos pequeños a testigos/algoritmos más rápidos
+- Secuenciación de hipótesis → construcción → detección de violación temporal
 
 ---
 
 ## Fase 2: Dónde queremos ir
 
 ### Objetivo Principal
-Implementar el RecursiveMirageServer que representa "The Recursive Mirage" - un servidor que demuestra auto-refutación infinita donde cada respuesta refuta la anterior.
+Implementar el WilliamsRefutationServer que representa "The Recursive Mirage" - un servidor que acepta una hipótesis de circuitos pequeños para NEXP, construye un SAT rápido, y exhibe la contradicción con la jerarquía temporal.
 
 ### Criterios de Éxito
-- Servidor MCP que simula recursión infinita controlada
-- Implementación de auto-refutación conceptual
+- Servidor MCP que modela hipótesis → construcción → contradicción
+- Implementación explícita del rol del Easy Witness Lemma
+- Línea de tiempo de construcción y verificación de violación temporal
 - Funciona con MinimalLauncher existente
-- Demuestra limitaciones de sistemas auto-referenciales
 
 ### Impacto Esperado
 Segundo show funcional que explora un tipo diferente de paradoja: la auto-refutación, complementando la auto-observación del primer show.
@@ -46,23 +46,23 @@ Segundo show funcional que explora un tipo diferente de paradoja: la auto-refuta
 
 ## Fase 3: Opciones para ir
 
-### Opción A: Recursión Simulada con Límite
-**Descripción:** Simular recursión infinita con un límite máximo de profundidad
-**Ventajas:** Seguro, no causa stack overflow
-**Desventajas:** No es verdaderamente infinito, puede parecer artificial
-**Viabilidad:** Alta - fácil de controlar
+### Opción A: Secuencia determinista de etapas
+**Descripción:** Estados: assume → construct_SAT → check_time_hierarchy → contradiction
+**Ventajas:** Clara, verificable
+**Desventajas:** Menos “dramática”
+**Viabilidad:** Alta
 
-### Opción B: Recursión Real con Timeout
-**Descripción:** Permitir recursión real pero con timeout para evitar colapso
-**Ventajas:** Más auténtico, muestra el problema real
-**Desventajas:** Riesgoso, puede colapsar el sistema
-**Viabilidad:** Baja - difícil de controlar
+### Opción B: Simulación de velocidad vs tamaño
+**Descripción:** Parametrizar δ, ε y medir tiempos simulados vs límites teóricos
+**Ventajas:** Pedagógica, cuantificable
+**Desventajas:** Requiere calibración
+**Viabilidad:** Alta
 
-### Opción C: Estado Cíclico Auto-Refutante
-**Descripción:** Servidor que mantiene estados que se contradicen entre sí
-**Ventajas:** Paradoja viviente, estable pero paradójica
-**Desventajas:** Puede ser menos obviamente "infinito"
-**Viabilidad:** Alta - controlable y elegante
+### Opción C: Híbrido con timeline visual
+**Descripción:** A + B con línea de tiempo de eventos y métricas
+**Ventajas:** Completo y didáctico
+**Desventajas:** Más trabajo
+**Viabilidad:** Alta
 
 ### Decisión Final
 Opción C: Estado cíclico auto-refutante con elementos de Opción A para mostrar profundidad recursiva controlada.
@@ -71,42 +71,113 @@ Opción C: Estado cíclico auto-refutante con elementos de Opción A para mostra
 
 ## Fase 4: Vamos (Ejecución)
 
-### Desarrollo del RecursiveMirageServer
+### Instrucciones Híbridas Academia-Teatro
+
+**Formalización con Performance Matemática**:
+```python
+def williams_refutation_pipeline(delta, n):
+    """
+    Implementa Teorema 4.1 (Williams 2013)
+    NEXP ⊆ SIZE(2^(n^δ)) ⟹ SAT ∈ DTIME(2^(n^(1-ε)))
+    """
+    # Paso 1: Hipótesis formal
+    hypothesis = assume_NEXP_has_small_circuits(delta)
+    
+    # Paso 2: Easy Witness Lemma (cita exacta)
+    epsilon = compute_epsilon_from_delta(delta)  # ε = f(δ) según Williams
+    fast_sat_algorithm = construct_via_easy_witness(epsilon)
+    
+    # Paso 3: Verificar contradicción temporal
+    time_hierarchy_violation = check_time_hierarchy(
+        fast_sat_algorithm.complexity,
+        NEXP_lower_bound
+    )
+    
+    return {
+        'contradiction_found': time_hierarchy_violation,
+        'formal_proof': generate_latex_proof(),
+        'timeline': generate_proof_timeline(),
+        'theater_effect': 'explosion' if time_hierarchy_violation else 'fizzle'
+    }
+```
+
+**Métricas Duales Academia-Teatro**:
+```typescript
+interface WilliamsMetrics {
+  academic: {
+    deltaValue: number;              // Parámetro δ del experimento
+    epsilonDerived: number;          // ε calculado via Easy Witness
+    timeComplexityMeasured: bigint;  // Complejidad temporal medida
+    hierarchyViolationProof: LaTeXProof; // Demostración formal
+    citationsGenerated: string[];   // Referencias automáticas
+  };
+  theatrical: {
+    explosionMagnitude: number;      // Intensidad visual del colapso
+    timelinePosition: number;        // Progreso dramático 0-1
+    audienceVotes: {yes: number, no: number}; // Participación
+    carpetovetonicTranslation: string; // "Como WhatsApp que explota"
+  };
+}
+```
+
+**Widget Interactivo Dual-Mode**:
+```html
+<div class="williams-experiment">
+  <toggle>📚 Formal | 🎭 Dramatic</toggle>
+  <div class="academic">
+    δ = <slider min="0.1" max="0.9" value="0.5"/>
+    ε = δ/(1+δ) = <calculated-value/>
+    Violación: <boolean-indicator/>
+  </div>
+  <div class="theater">
+    Potencia del espejismo: <visual-slider/>
+    Cuenta regresiva: <countdown-timer/>
+    ¡EXPLOSIÓN! <particle-effect/>
+  </div>
+</div>
+```
+
+### Instrucciones de Experiencia Teatral
+
+**El Espejismo como Performance Digital**:
+- Animación de entrada: el servidor "aparece" materializándose como espejismo en desierto de datos
+- Cada paso del pipeline Williams mostrado como ondas de luz que se propagan
+- Sonido épico de "tiempo colapsando" cuando detecta contradicción temporal
+
+**Timeline Dramático**:
+- Visualización cinematográfica con cuenta regresiva hacia violación de jerarquía
+- Música que acelera progresivamente desde δ → ε → contradicción
+- Explosión visual estilo fuegos artificiales cuando NEXP colapsa temporalmente
+
+**Participación de Audiencia**:
+- Votación en tiempo real: "¿Crees que esta hipótesis NEXP ⊆ SIZE(2^(n^δ)) sobrevivirá?"
+- Chat con emojis de asombro cuando ocurre la auto-refutación
+- Badge especial: "Testigo del Colapso Temporal" para quien ve la contradicción completa
+
+**Narrativa Carpetovétonica**:
+- "Es como el WhatsApp que se manda mensajes a sí mismo hasta que explota el móvil"
+- "Como cuando dices una mentira y luego tienes que inventar otra para tapar la primera"
+
+### Desarrollo del WilliamsRefutationServer (instrucciones)
 
 ```typescript
 // teatro-computacional/servers/recursive-mirage-server.ts
-interface MirageState {
-  currentStatement: string;
-  refutationChain: string[];
-  depth: number;
-  maxDepth: number;
-  isRefuting: boolean;
-}
+Instrucciones de implementación (no código):
+1) Métodos MCP requeridos
+  - assumeSmallCircuits(params: { delta }): fija hipótesis NEXP ⊆ SIZE(2^(n^δ))
+  - constructFastSAT(params: { epsilon }): aplica Easy Witness y devuelve “velocidad”/tamaño
+  - checkTimeHierarchy(): compara tiempos y devuelve violación si procede
+  - refutationTimeline(): devuelve secuencia de eventos con δ, ε, tiempos simulados y punto de contradicción
 
-export class RecursiveMirageServer implements MCPServer {
-  name = "recursive-mirage";
-  private state: MirageState = {
-    currentStatement: "This statement is true",
-    refutationChain: [],
-    depth: 0,
-    maxDepth: 100, // Límite de seguridad
-    isRefuting: false
-  };
+2) Estado interno mínimo
+  - hypothesis: { delta }
+  - construction: { epsilon, derivedSpeed }
+  - timing: { expected, achieved, violated }
+  - timeline: Event[]
 
-  async handleRequest(request: MCPRequest): Promise<MCPResponse> {
-    switch (request.method) {
-      case "getStatement":
-        return this.handleGetStatement();
-      case "refute":
-        return this.handleRefute(request.params?.depth || 1);
-      case "getMirageDepth":
-        return this.handleGetMirageDepth();
-      case "resetMirage":
-        return this.handleResetMirage();
-      default:
-        return this.handleRefuteEverything(request);
-    }
-  }
+3) Reglas de fidelidad
+  - Explicitar relación δ ↔ ε en outputs
+  - Si no hay violación, explicar por qué (parámetros inválidos) y cómo ajustarlos
 
   private handleGetStatement(): MCPResponse {
     const response = {
@@ -183,27 +254,26 @@ export class RecursiveMirageServer implements MCPServer {
 ```json
 {
   "methods": {
-    "getStatement": "Obtener la declaración actual (la refuta automáticamente)",
-    "refute": "Refutar N niveles de profundidad",
-    "getMirageDepth": "Obtener la profundidad actual del espejismo",
-    "resetMirage": "Reiniciar el espejismo (que se refuta a sí mismo)"
+    "assumeSmallCircuits": "Fijar hipótesis NEXP ⊆ SIZE(2^(n^δ))",
+    "constructFastSAT": "Aplicar Easy Witness y obtener SAT rápido",
+    "checkTimeHierarchy": "Detectar violación de jerarquía temporal",
+    "refutationTimeline": "Obtener la línea de tiempo de la contradicción"
   },
-  "paradoxPattern": "Auto-refutación infinita controlada"
+  "pattern": "Hipótesis → Construcción → Contradicción"
 }
 ```
 
-### Verificación de Auto-Refutación No-Natural
-- Cada statement refuta al anterior pero se refuta a sí mismo
-- Sistema que no puede mantener una verdad estable
-- Demuestra imposibilidad de auto-validación consistente
-- Refleja límites de sistemas que intentan probarse a sí mismos
+### Verificación de fidelidad (Williams)
+- Mostrar configuración de δ, ε y la existencia de SAT más rápido
+- Señalar explícitamente qué jerarquía temporal se viola
+- Documentar relación con NEXP ⊄ ACC^0 como precedente
 
 ### Pasos Críticos
 1. Implementar estado cíclico auto-refutante
 2. Crear sistema de refutación controlada
 3. Implementar métodos de profundidad y reset
 4. Configurar auto-refutación automática
-5. Tests demostrando el ciclo infinito de refutación
+5. Tests que validen detección de violación temporal bajo parámetros válidos
 
 ---
 

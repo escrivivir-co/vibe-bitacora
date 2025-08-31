@@ -11,7 +11,146 @@
 
 ## Fase 1: De dónde venimos
 
-### Contexto Previo
+### Co}
+```
+
+### Instrucciones Híbridas Academia-Teatro
+
+**Formalización de Juegos Interactivos**:
+```typescript
+interface GameMechanicsFormal {
+  academic: {
+    proofVerification: {
+      constructivityCheck: (proof: ProofTree) => boolean;
+      densityMeasurement: (oracle: OracleFunction) => number;
+      asymmetryDetection: (fields: [Field, Field]) => AsymmetryProof;
+    };
+    playerProgress: {
+      mathematicalAccuracy: number;    // Precisión en conceptos 0-1
+      proofCompleteness: number;       // Completitud formal 0-1
+      citationCorrectness: boolean;    // Referencias exactas
+    };
+    rewardSystem: {
+      theoremUnlocked: string[];       // Teoremas desbloqueados
+      academicCredits: number;         // Puntos de rigor
+      publicationTokens: number;       // Tokens para papers
+    };
+  };
+  theatrical: {
+    narrativeImmersion: {
+      dramaticTension: number;         // Tensión dramática 0-1
+      audienceEngagement: number;      // Participación 0-1
+      carpetovetonicTranslation: string; // Explicación callejera
+    };
+    visualEffects: {
+      explosionMagnitude: number;      // Intensidad visual
+      kaleidoscopeComplexity: number;  // Complejidad del patrón
+      colorPalette: RGBColor[];        // Paleta cromática
+    };
+    socialFeatures: {
+      teamCollaboration: boolean;      // Trabajo en equipo
+      publicVoting: boolean;           // Votación del público
+      memeGeneration: boolean;         // Generación de memes
+    };
+  };
+}
+```
+
+**Sistema de Logros Dual**:
+```typescript
+const DUAL_ACHIEVEMENTS = {
+  "Euler's Ghost": {
+    academic: "Demostrar constructividad usando densidad oracle",
+    theatrical: "Hacer aparecer el fantasma de Euler en el escenario",
+    unlock: () => verifyConstructivityProof() && triggerGhostEffect()
+  },
+  "Williams Explosion": {
+    academic: "Probar violación de jerarquía temporal",
+    theatrical: "Crear explosión dramática con partículas",
+    unlock: () => detectTimeHierarchyViolation() && launchFireworks()
+  },
+  "Razborov Kaleidoscope": {
+    academic: "Medir asimetría entre Z/2Z y extensión algebraica",
+    theatrical: "Fragmentar caleidoscopio en mil colores",
+    unlock: () => measureFieldAsymmetry() && shatterKaleidoscope()
+  }
+};
+```
+
+**UI Responsiva Academia-Teatro**:
+```html
+<div class="game-interface">
+  <mode-selector>
+    <option value="academic">🎓 Rigor Mode</option>
+    <option value="theater">🎭 Show Mode</option>
+    <option value="hybrid">⚡ Fusion Mode</option>
+  </mode-selector>
+  
+  <progress-dual>
+    <academic-track>
+      Proof Progress: <progress-bar value="academic.proofCompleteness"/>
+      Citations: <citation-counter/>
+      Rigor Score: <rigor-meter/>
+    </academic-track>
+    <theater-track>
+      Audience Hype: <hype-meter/>
+      Visual Impact: <effects-intensity/>
+      Meme Potential: <viral-score/>
+    </theater-track>
+  </progress-dual>
+  
+  <challenge-arena>
+    <!-- Mismos retos, doble presentación -->
+    <academic-view>
+      <theorem-statement/>
+      <proof-builder/>
+      <verification-panel/>
+    </academic-view>
+    <theater-view>
+      <story-narrative/>
+      <interactive-stage/>
+      <audience-participation/>
+    </theater-view>
+  </challenge-arena>
+</div>
+```
+
+### Fusión de Mecánicas Teatrales y Rigor Matemático
+
+**Estados como Escenas Teatrales**:
+- Cada estado es una "escena" con iluminación específica (dorada/no-natural, roja/natural, azul/extensión)
+- Transiciones animadas con efectos de partículas que representan densidades y preservación
+- Descripción inmersiva: "Sientes la paradoja envolviéndote como niebla matemática"
+
+**NPCs Guía con Personalidad**:
+- **El Matemático Loco**: Explica teoría con metáforas absurdas ("¡La densidad es como el perfume!")
+- **La Audiencia Virtual**: Reacciona a decisiones con aplausos, gasps y "¡No puede ser!"
+- **El Crítico Escéptico**: Cuestiona todo y aprende junto al usuario ("¿Seguro que eso no es trampa?")
+
+**Progresión Narrativa Coreografiada**:
+- **Acto 1 - Descubrimiento**: Tutoriales disfrazados como "rituales de iniciación mágica"
+- **Acto 2 - Experimentación**: Gameplay principal con "desafíos del cosmos matemático"
+- **Acto 3 - Revelación**: La paradoja completa se revela con "iluminación cósmica"
+
+### Instrucciones de Fidelidad Matemática Teatralizada
+
+**BoxParadoxGame - "El Ritual de la Caja Vidente"**:
+- calculateDensity(state) mostrado como "lectura del aura" con colores cambiantes
+- Indicador "Natural ↔ No-Natural" estilo termómetro místico con efectos de partículas
+- Mini-juego: "Encuentra el punto dulce de densidad" con slider que cambia ambiente sonoro
+- Feedback: "¡Has encontrado la frecuencia cuasi-natural! Los PRGs no pueden verte"
+
+**RecursiveMirageGame - "La Danza del Tiempo Colapsante"**:
+- constructWitness(hypothesis) visualizado como "invocación del algoritmo SAT"
+- Timeline como cuenta regresiva épica con música que acelera hacia contradicción
+- Mini-juego: "Carrera contra la jerarquía temporal" con efectos de velocidad
+- Momento climático: Explosión visual cuando δ y ε causan violación temporal
+
+**AlgebraicMirrorGame - "El Espejo de las Realidades Múltiples"**:
+- testPropertyPreservation(field) como "cambio entre dimensiones algebraicas"
+- Comparación visual Z/2Z vs extensiones con efectos de fractura progresiva
+- Mini-juego: "Rompe el espejo" ajustando nivel de extensión hasta la ruptura
+- Sonido de cristal escalado: susurro (preservado) → estruendo (completamente roto)Previo
 - Iteraciones 03-05: Tres servidores MCP completados y funcionales
 - BoxParadoxServer, RecursiveMirageServer, AlgebraicMirrorServer operativos
 - Patrón StateGraph establecido en xplus1-app como referencia
@@ -140,6 +279,11 @@ export class BoxParadoxGame extends StateGraph {
 }
 ```
 
+Instrucciones de fidelidad matemática (BoxParadoxGame):
+- Implementar calculateDensity(state) y mostrar μ estimada vs umbral 2^(-q(n)) configurable
+- Añadir indicador “Natural ↔ No-Natural” y explicación de utilidad/constructividad
+- Mini-juego: “Find the sweet spot density” con ajustes de q(n)
+
 ### Desarrollo de RecursiveMirageGame
 
 ```typescript
@@ -210,6 +354,11 @@ export class RecursiveMirageGame extends StateGraph {
   }
 }
 ```
+
+Instrucciones de fidelidad matemática (RecursiveMirageGame):
+- Añadir constructWitness(hypothesis) que parametriza δ y deriva ε
+- Visualizar línea de tiempo de construcción y violación de jerarquía temporal
+- Mini-juego: “Race against time hierarchy”
 
 ### Desarrollo de AlgebraicMirrorGame
 
@@ -283,6 +432,11 @@ export class AlgebraicMirrorGame extends StateGraph {
   }
 }
 ```
+
+Instrucciones de fidelidad matemática (AlgebraicMirrorGame):
+- Implementar testPropertyPreservation(field) con modos Z/2Z y extensiones
+- Mostrar comparación visual y señalar rupturas de preservación
+- Mini-juego: “Break the mirror” variando el nivel de extensión
 
 ### Sistema Base de StateGraph
 

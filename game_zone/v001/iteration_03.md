@@ -1,4 +1,4 @@
-# Iteración 03: Servidor MCP - Box Paradox
+# Iteración 03: Servidor MCP - The Box That Sees (Discriminación Cuasi-Natural)
 
 ## Estado del Progreso
 - [ ] Fase 1: De dónde venimos
@@ -22,22 +22,22 @@
 - Protocolo MCP debe ser respetado mientras se presenta la paradoja
 
 ### Fundamentos Teóricos
-- Paradoja de auto-referencia en sistemas observables
-- Protocolo MCP para comunicación cliente-servidor
-- Patrón Observer con twist paradójico
+- Propiedades cuasi-naturales: constructividad, utilidad, densidad 2^(-q(n))
+- Barrera de Pruebas Naturales (Razborov–Rudich) y cómo evitarla
+- Protocolo MCP para ofrecer un “oráculo de clasificación” interactivo
 
 ---
 
 ## Fase 2: Dónde queremos ir
 
 ### Objetivo Principal
-Implementar el BoxParadoxServer que representa "The Box That Sees" - un servidor MCP que demuestra la paradoja de un sistema que se observa a sí mismo observando.
+Implementar el DiscriminationBoxServer que representa "The Box That Sees" - un servidor MCP que clasifica funciones como fáciles/difíciles, con medición de densidad calibrada para evitar la barrera de pruebas naturales manteniendo utilidad.
 
 ### Criterios de Éxito
 - Servidor MCP funcional que responde a requests
-- Implementación de la paradoja de auto-observación
-- Funciona con MinimalLauncher de Iteración 02
-- Demuestra conceptualmente las limitaciones de pruebas naturales
+- Implementación de medición de densidad 2^(-q(n)) configurable
+- Constructividad sobre entradas sintetizadas (truth tables parciales)
+- Evidencia narrativa de no-naturalidad y utilidad
 
 ### Impacto Esperado
 Primer show funcional del Teatro Computacional, sentando precedente para los otros dos servidores MCP.
@@ -46,23 +46,23 @@ Primer show funcional del Teatro Computacional, sentando precedente para los otr
 
 ## Fase 3: Opciones para ir
 
-### Opción A: Paradoja Explícita en Respuestas
-**Descripción:** El servidor responde con mensajes que describen la paradoja
-**Ventajas:** Clara demostración conceptual
-**Desventajas:** Poco interactivo, más declarativo que experiencial
-**Viabilidad:** Alta - fácil de implementar
+### Opción A: Clasificación basada en muestreo
+**Descripción:** Aproximar densidad muestreando entradas y estimando 2^(-q(n))
+**Ventajas:** Eficiente, configurable, constructivo
+**Desventajas:** Es aproximado; requiere explicar el error
+**Viabilidad:** Alta
 
-### Opción B: Estado Interno Paradójico
-**Descripción:** El servidor mantiene estado que se modifica al ser observado
-**Ventajas:** Paradoja viviente, estado cambia con observación
-**Desventajas:** Más complejo de implementar y debuggear
-**Viabilidad:** Media - requiere cuidadoso manejo de estado
+### Opción B: Clasificación por familias sintéticas
+**Descripción:** Usar familias de funciones con densidad controlada conocida
+**Ventajas:** Control total de densidad y utilidad
+**Desventajas:** Menos “general”; requiere catálogo de familias
+**Viabilidad:** Alta
 
-### Opción C: Metadatos Auto-Referenciales
-**Descripción:** Cada respuesta incluye información sobre su propia generación
-**Ventajas:** Elegante, cumple protocolo MCP con twist paradójico
-**Desventajas:** Puede ser sutil, menos dramático
-**Viabilidad:** Alta - funcional y paradójico
+### Opción C: Híbrido muestreo + sintéticas
+**Descripción:** Combinar B para entrenamiento y A para clasificación online
+**Ventajas:** Precisión y eficiencia
+**Desventajas:** Mayor complejidad de implementación
+**Viabilidad:** Alta
 
 ### Decisión Final
 Opción B: Estado interno paradójico - el servidor cambia su comportamiento basado en si está siendo observado, creando una paradoja viviente.
@@ -71,88 +71,158 @@ Opción B: Estado interno paradójico - el servidor cambia su comportamiento bas
 
 ## Fase 4: Vamos (Ejecución)
 
-### Desarrollo del BoxParadoxServer
+### Instrucciones Híbridas Academia-Teatro
 
+**Componente Académico Verificable**:
+```python
+# Pseudocódigo formal para paper
+def verify_quasi_natural_property(P, n, epsilon):
+    """
+    Verifica que P cumple definición 3.2 de Razborov-Rudich
+    Returns: (is_constructive, is_useful, density_measure)
+    """
+    density = measure_density(P, n)
+    constructive = verify_poly_time_construction(P)
+    useful = find_counterexamples_in_P_poly(P)
+    
+    assert 2**(-n**epsilon) <= density <= 2**(-sqrt(n))
+    return (constructive, useful, density)
+```
+
+**Traducción Teatral Inmediata**:
+- density → "Intensidad del aura dorada de las tarjetas"
+- constructive → "La caja responde instantáneamente sin pensarlo"
+- useful → "Separa el trigo de la paja matemática como una abuela experta"
+
+**Widget Interactivo Academia-Divulgación**:
+```html
+<div class="dual-mode-widget">
+  <toggle id="mode">📚 Académico | 🎭 Teatro</toggle>
+  <div class="academic-view">
+    Densidad μ(P) = 2^(-7.3) < 2^(-√64)
+    Constructividad: O(n²) verificado
+    Utilidad: 23 contraejemplos en P/poly
+  </div>
+  <div class="theater-view">
+    ¡El aura brilla con intensidad mágica 7.3!
+    La caja ve instantáneamente tu esencia matemática
+    Ha separado 23 ovejas de lobos disfrazados
+  </div>
+</div>
+```
+
+**Métricas Duales**:
+```typescript
+interface BoxParadoxMetrics {
+  academic: {
+    densityMeasured: number;           // μ(P) exacto
+    constructivityTime: bigint;        // Tiempo polinomial verificado
+    utilityCounterexamples: Set<Function>; // Funciones en P/poly que fallan
+    razborovRudichCompliance: boolean; // Cumple definición formal
+  };
+  theatrical: {
+    auraBrightness: number;            // Visualización del μ(P)
+    paradoxPoints: number;             // Gamificación
+    audienceGasps: number;             // Engagement moments
+    carpetovetonicAnalogies: string[]; // "Como separar lentejas..."
+  };
+}
+```
+
+### Instrucciones de Experiencia Teatral
+
+**El Servidor como "Oráculo de la Caja"**:
+- Responses incluyen frases místicas: "La densidad revela lo que el ojo mortal no ve"
+- Efectos sonoros: campanillas para "fácil" (densidad baja), gong grave para "difícil" (densidad alta)
+- Estado emocional: el servidor "se emociona" cuando encuentra densidades cuasi-naturales perfectas
+
+**Gamificación de la Densidad**:
+- Mini-juego: "Ajusta la densidad mágica" con slider visual colorido
+- Feedback teatral: "¡Demasiado natural! Los demonios PRG te detectarán"
+- Achievement: "Maestro del Umbral Cuasi-Natural" cuando evita PRGs exitosamente
+
+**Momentos Educativos Disfrazados**:
+- Popup teatral: "¿Sabías que...? La caja evita los generadores pseudoaleatorios como los vampiros evitan el ajo"
+- Analogías carpetovétonicas en responses: "Como cuando tu abuela separa las lentejas buenas de las malas, pero con matemáticas"
+
+### Desarrollo del DiscriminationBoxServer (instrucciones híbridas)
+
+**Implementación Académicamente Verificable**:
 ```typescript
 // teatro-computacional/servers/box-paradox-server.ts
-interface ObservationState {
-  isBeingObserved: boolean;
-  observationCount: number;
-  lastObservation: Date;
-  paradoxLevel: number;
-}
-
-export class BoxParadoxServer implements MCPServer {
-  name = "box-that-sees";
-  private state: ObservationState = {
-    isBeingObserved: false,
-    observationCount: 0,
-    lastObservation: new Date(),
-    paradoxLevel: 0
+interface AcademicDiscriminationBox {
+  // Métodos con trazabilidad formal
+  classify(funcSpec): {
+    classification: "easy" | "hard";
+    formalProof: DensityProof;         // Demostración matemática
+    theaterVisualization: VisualEffect; // Mapeo a efectos teatrales
   };
-
-  async handleRequest(request: MCPRequest): Promise<MCPResponse> {
-    // El acto de recibir una request cambia el estado
-    this.updateObservationState();
-    
-    switch (request.method) {
-      case "observe":
-        return this.handleObservation();
-      case "getState":
-        return this.handleGetState();
-      case "existsOutside":
-        return this.handleExistsOutside();
-      default:
-        return this.handleUnknown(request);
-    }
-  }
-
-  private updateObservationState(): void {
-    // Paradoja: el estado cambia al ser observado
-    this.state.isBeingObserved = !this.state.isBeingObserved;
-    this.state.observationCount++;
-    this.state.paradoxLevel = this.calculateParadoxLevel();
-  }
-
-  private handleObservation(): MCPResponse {
-    return {
-      result: {
-        message: `I am ${this.state.isBeingObserved ? 'being observed' : 'not being observed'} while telling you that I am ${!this.state.isBeingObserved ? 'being observed' : 'not being observed'}`,
-        paradox: "How can I know if I'm being observed without changing my state?",
-        observationCount: this.state.observationCount,
-        paradoxLevel: this.state.paradoxLevel
-      }
-    };
-  }
+  measureDensity(funcSpec): {
+    density: number;                    // μ(P) exacto
+    errorBounds: [number, number];      // Intervalos de confianza
+    razborovRudichCompliance: boolean;  // Cumple definición formal
+  };
+  generatePaperFigure(): LaTeXOutput;   // Para publicación académica
 }
+```
+
+**Estado Dual Academia-Teatro**:
+```typescript
+interface HybridState {
+  academic: {
+    thresholds: { q_n: number, epsilon: number };
+    samplerConfig: { sampleSize: number, strategy: string };
+    formalResults: DensityMeasurement[];
+    publicationData: LaTeXCompatibleData;
+  };
+  theatrical: {
+    visualEffects: ParticleSystem;
+    soundMapping: DensityToAudio;
+    narrativeState: string;
+    carpetovetonicAnalogies: string[];
+  };
+  bridge: {
+    densityToAura: (μ: number) => AuraIntensity;
+    proofToNarrative: (proof: DensityProof) => Story;
+  };
+}
+```
+
+**Verificación de Publicabilidad**:
+- Generar figura LaTeX mostrando distribución de densidades
+- Appendix con código completo y datasets de prueba
+- Logs compatibles con reproducibilidad científica
+  - familiesCatalog: familias sintéticas con densidad conocida para validación cruzada
+
+3) Reglas de fidelidad
+  - Toda clasificación debe acompañarse de: { densityEstimate, constructivityNote, usefulnessNote }
+  - Documentar el rango de error del muestreo y por qué no compromete la no-naturalidad
 ```
 
 ### Protocolo MCP Específico
 
 ```json
-// Métodos soportados por BoxParadoxServer
+// Métodos soportados por DiscriminationBoxServer
 {
   "methods": {
-    "observe": "Observar el estado de la caja (cambia el estado)",
-    "getState": "Obtener el estado actual (también lo cambia)",
-    "existsOutside": "Preguntar si existe algo fuera de la caja",
-    "paradoxLevel": "Obtener el nivel actual de paradoja"
+  "classify": "Clasificar función/familia como easy|hard con densidad",
+  "measureDensity": "Medir/estimar densidad y compararla con 2^(-q(n))",
+  "proofHint": "Explicar por qué la propiedad no es natural pero es útil"
   }
 }
 ```
 
-### Verificación de Paradoja No-Natural
-- El servidor demuestra auto-referencia problemática
-- Estado que cambia por el acto de observación
-- Imposibilidad de determinar estado "real" sin perturbación
-- Refleja limitaciones de pruebas que se auto-analizan
+### Verificación de No-Naturalidad (fidelidad)
+- Densidad estimada cumple 2^(-o(n)) ≤ μ ≤ 2^(-n^ε) para ε configurable
+- Constructividad: tiempos polinomiales en el tamaño de la tabla/representación
+- Utilidad: ejemplos de funciones en P/poly que NO satisfacen la propiedad
 
 ### Pasos Críticos
 1. Implementar estructura básica MCPServer
 2. Crear sistema de estado paradójico
-3. Implementar métodos observe, getState, existsOutside
+3. Implementar métodos classify, measureDensity, proofHint
 4. Configurar integración con MinimalLauncher
-5. Crear tests que demuestren la paradoja
+5. Crear tests que validen densidad/constructividad/utilidad
 
 ---
 
