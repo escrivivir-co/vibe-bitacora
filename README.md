@@ -1,5 +1,7 @@
 # README.md
 
+![](./blog/respuesta_42_al_problema.png)
+
 # Proyecto P vs NP: Iteraciones y Progresos
 
 ![](./blog/banner_vibecoding.png)
