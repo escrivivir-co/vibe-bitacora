@@ -2,6 +2,10 @@
 
 # Proyecto P vs NP: Iteraciones y Progresos
 
+Sea como fuere, nuestro [./objeto_de_estudio](./objeto_de_estudio/) va concretándose. He inicializado el proyecto, con su [./objeto_de_estudio/README.md](./objeto_de_estudio/README.md).
+
+A partir de [./objeto_de_estudio/Sota.md](./objeto_de_estudio/Sota.md) de una revisión del estado del arte del tema, hemos encargado a una agencia de publicidad que nos haga estos: [objeto_de_estudio/brief](./objeto_de_estudio/BRIEF.md) y [./objeto_de_estudio/brief-es](./objeto_de_estudio/BRIEF2.md); [Activado el modo irónico. Todo el texto hasta la marca de fin debe leerse en esa clave] con clara intención de vender el pescado antes de pescarlo. Tú sabes, lo primero es colocarse en el mercado y luego pues ya si eso aportar valor.[Desactivado el modo irónico]
+
 ## Descripción del Proyecto
 
 Este proyecto tiene como objetivo explorar y presentar tres pruebas no naturales para evitar los límites establecidos por Razborov-Rudich en el contexto del problema P vs NP. A través de un proceso iterativo, se desarrollarán diez documentos en formato markdown que documentarán el progreso y las reflexiones en cada etapa del proyecto.
