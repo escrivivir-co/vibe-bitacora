@@ -3,6 +3,9 @@
 # Proyecto P vs NP: Iteraciones y Progresos
 
 ![](./blog/banner_vibecoding.png)
+Sea como fuere, nuestro [./objeto_de_estudio](./objeto_de_estudio/) va concretándose. He inicializado el proyecto, con su [./objeto_de_estudio/README.md](./objeto_de_estudio/README.md).
+
+A partir de [./objeto_de_estudio/Sota.md](./objeto_de_estudio/Sota.md) de una revisión del estado del arte del tema, hemos encargado a una agencia de publicidad que nos haga estos: [objeto_de_estudio/brief](./objeto_de_estudio/BRIEF.md) y [./objeto_de_estudio/brief-es](./objeto_de_estudio/BRIEF2.md); [Activado el modo irónico. Todo el texto hasta la marca de fin debe leerse en esa clave] con clara intención de vender el pescado antes de pescarlo. Tú sabes, lo primero es colocarse en el mercado y luego pues ya si eso aportar valor.[Desactivado el modo irónico]
 
 ## Descripción del Proyecto
 
@@ -33,4 +36,5 @@ El proyecto está organizado de la siguiente manera:
 
 ![](./blog/plan_comercial.png)
 
+El objetivo final de este proyecto es contribuir al entendimiento del problema P vs NP a través de un enfoque sistemático y documentado, facilitando la exploración de nuevas ideas y enfoques en la teoría de la complejidad computacional.
 El objetivo final de este proyecto es contribuir al entendimiento del problema P vs NP a través de un enfoque sistemático y documentado, facilitando la exploración de nuevas ideas y enfoques en la teoría de la complejidad computacional.
