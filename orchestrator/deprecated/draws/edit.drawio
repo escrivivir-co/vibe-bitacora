@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="GitHubCopilot" version="28.1.2">
+  <diagram name="Page-1" id="nrMDSHrh1mtwg5gxZ5Ba">
+    <mxGraphModel dx="1477" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="launcher" value="Launcher&lt;br&gt;(start Runtimes)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFAE3;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="420" y="220" width="320" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=2;dashed=1;" vertex="1" parent="launcher-server-group">
+          <mxGeometry width="320" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-server-title" value="MCPLauncherServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-orchestrator" value="Orchestrator&lt;br&gt;(RxJS)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="90" y="50" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-channel-app" value="app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#EBF5FB;strokeColor=#0000FF;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="30" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-channel-sys" value="sys" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#E6FFEF;strokeColor=#00A200;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="130" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-channel-ui" value="ui" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#F3F3F3;strokeColor=#A2A2A2;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="230" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-socket-client" value="Socket.IO Client&lt;br&gt;(→ ws-server)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="90" y="180" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-mcp-adapter" value="MCPDriverAdapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="90" y="250" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-30" y="620" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;dashed=1;" vertex="1" parent="devops-server-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-server-title" value="DevOpsServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="330" y="620" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;dashed=1;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-server-title" value="StateMachineServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="690" y="620" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;strokeWidth=2;dashed=1;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-server-title" value="WikiBrowserServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="920" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=2;dashed=1;fontColor=#ffffff;" vertex="1" parent="console-ui-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-title" value="ConsoleGamificationUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="560" y="920" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=2;dashed=1;fontColor=#ffffff;" vertex="1" parent="web-ui-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-title" value="WebGamificationUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-devops" value="Runtime&lt;br&gt;(DevOps)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#E5F5E0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1220" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-statemachine" value="Runtime&lt;br&gt;(StateMachine)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#E5F5E0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="1220" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-wiki" value="Runtime&lt;br&gt;(WikiBrowser)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#ae4132;fillColor=#fad9d5;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1220" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-launcher-to-launcher-server" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="launcher" target="launcher-server-group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-devops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="devops-server-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="580" />
+              <mxPoint x="130" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-statemachine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="statemachine-server-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="580" />
+              <mxPoint x="490" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-wiki" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ae4132;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="wikibrowser-server-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="580" />
+              <mxPoint x="850" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-console-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#314354;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="console-ui-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="890" />
+              <mxPoint x="260" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-web-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#314354;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="web-ui-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="890" />
+              <mxPoint x="720" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-console-ui-to-runtime-devops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="console-ui-group" target="runtime-devops">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-web-ui-to-runtime-statemachine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="web-ui-group" target="runtime-statemachine">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-web-ui-to-runtime-wiki" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="web-ui-group" target="runtime-wiki">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+```// filepath: pvsnp/orchestrator/EXTENDED_ARCHITECTURE.drawio
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="GitHubCopilot" version="28.1.2">
+  <diagram name="Page-1" id="nrMDSHrh1mtwg5gxZ5Ba">
+    <mxGraphModel dx="1477" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="launcher" value="Launcher&lt;br&gt;(start Runtimes)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFAE3;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="420" y="220" width="320" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=2;dashed=1;" vertex="1" parent="launcher-server-group">
+          <mxGeometry width="320" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-server-title" value="MCPLauncherServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-orchestrator" value="Orchestrator&lt;br&gt;(RxJS)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="90" y="50" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-channel-app" value="app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#EBF5FB;strokeColor=#0000FF;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="30" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-channel-sys" value="sys" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#E6FFEF;strokeColor=#00A200;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="130" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-channel-ui" value="ui" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#F3F3F3;strokeColor=#A2A2A2;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="230" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-socket-client" value="Socket.IO Client&lt;br&gt;(→ ws-server)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="90" y="180" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher-mcp-adapter" value="MCPDriverAdapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="launcher-server-group">
+          <mxGeometry x="90" y="250" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-30" y="620" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;dashed=1;" vertex="1" parent="devops-server-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-server-title" value="DevOpsServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="devops-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="devops-server-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="330" y="620" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;dashed=1;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-server-title" value="StateMachineServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="statemachine-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="statemachine-server-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-server-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="690" y="620" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-server-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;strokeWidth=2;dashed=1;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-server-title" value="WikiBrowserServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wikibrowser-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="wikibrowser-server-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="920" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=2;dashed=1;fontColor=#ffffff;" vertex="1" parent="console-ui-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-title" value="ConsoleGamificationUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="console-ui-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="console-ui-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-group" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="560" y="920" width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=2;dashed=1;fontColor=#ffffff;" vertex="1" parent="web-ui-group">
+          <mxGeometry width="320" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-title" value="WebGamificationUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="80" y="10" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-socket-client" value="Socket.IO Client&lt;br&gt;Plugin" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="90" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-orchestrator-client" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="90" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web-ui-mcp-adapter" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;" vertex="1" parent="web-ui-group">
+          <mxGeometry x="90" y="190" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-devops" value="Runtime&lt;br&gt;(DevOps)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#E5F5E0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1220" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-statemachine" value="Runtime&lt;br&gt;(StateMachine)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#E5F5E0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="1220" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-wiki" value="Runtime&lt;br&gt;(WikiBrowser)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#ae4132;fillColor=#fad9d5;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1220" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-launcher-to-launcher-server" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="launcher" target="launcher-server-group">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-devops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="devops-server-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="580" />
+              <mxPoint x="130" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-statemachine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="statemachine-server-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="580" />
+              <mxPoint x="490" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-wiki" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ae4132;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="wikibrowser-server-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="580" />
+              <mxPoint x="850" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-console-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#314354;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="console-ui-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="890" />
+              <mxPoint x="260" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-launcher-server-to-web-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#314354;strokeWidth=1;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher-server-group" target="web-ui-group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="890" />
+              <mxPoint x="720" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-console-ui-to-runtime-devops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="console-ui-group" target="runtime-devops">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-web-ui-to-runtime-statemachine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="web-ui-group" target="runtime-statemachine">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-web-ui-to-runtime-wiki" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="web-ui-group" target="runtime-wiki">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
