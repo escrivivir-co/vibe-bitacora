@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0" version="28.1.2">
+  <diagram name="Page-1" id="2JLTe55yJ2MOAtppCcfd">
+    <mxGraphModel dx="3215" dy="2040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1700" y="2370" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=3;dashed=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-1">
+          <mxGeometry width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-3" value="DevOpsServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-1">
+          <mxGeometry x="110" y="15" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-4" value="Socket.IO Client&lt;br&gt;Plugin (Rooms)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-1">
+          <mxGeometry x="120" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-5" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-1">
+          <mxGeometry x="120" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-6" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-1">
+          <mxGeometry x="120" y="240" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-7" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="2130" y="2360" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=3;dashed=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-7">
+          <mxGeometry width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-9" value="StateMachineServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-7">
+          <mxGeometry x="110" y="15" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-10" value="Socket.IO Client&lt;br&gt;Plugin (Rooms)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-7">
+          <mxGeometry x="120" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-11" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-7">
+          <mxGeometry x="120" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-12" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-7">
+          <mxGeometry x="120" y="240" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-13" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1080" y="1940" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;strokeWidth=3;dashed=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-13">
+          <mxGeometry width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-15" value="WikiBrowserServer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-13">
+          <mxGeometry x="110" y="15" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-16" value="Socket.IO Client&lt;br&gt;Plugin (Rooms)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-13">
+          <mxGeometry x="120" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-17" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-13">
+          <mxGeometry x="120" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-18" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-13">
+          <mxGeometry x="120" y="240" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=3;dashed=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="290" y="280" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-20" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="300" y="1340" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-21" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=3;dashed=1;fontColor=#ffffff;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-20">
+          <mxGeometry width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-22" value="WebGamificationUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-20">
+          <mxGeometry x="110" y="15" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-23" value="Socket.IO Client&lt;br&gt;Plugin (Rooms)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-20">
+          <mxGeometry x="120" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-24" value="Orchestrator&lt;br&gt;Client" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-20">
+          <mxGeometry x="120" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-25" value="MCP Adapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-20">
+          <mxGeometry x="120" y="240" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-26" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="3060" y="910" width="380" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-27" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;strokeWidth=3;dashed=1;fontColor=#ffffff;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-26">
+          <mxGeometry width="380" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-28" value="CopilotLikeAgent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-26">
+          <mxGeometry x="110" y="15" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uU78wAH0K4h2izJ6IgC1-29" value="MCP Adapter&lt;br&gt;(AlephScript Connection)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="uU78wAH0K4h2izJ6IgC1-26">
+          <mxGeometry x="120" y="70" width="140" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
