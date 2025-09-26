@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0" version="28.1.2">
+  <diagram name="Page-1" id="YUnTjhecedms24v3QjhB">
+    <mxGraphModel dx="1286" dy="816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="330" y="290" width="620" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;strokeWidth=3;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry width="620" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-3" value="Socket.IO Server&lt;br&gt;(AlephScript Rooms)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="120" y="15" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-4" value="room: devops" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="30" y="70" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-5" value="room: statemachine" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="220" y="70" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-6" value="room: wikibrowser" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="410" y="70" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-7" value="room: ui-console" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="30" y="180" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-8" value="room: ui-web" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="220" y="180" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-9" value="room: copilot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="410" y="180" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AgoxpqBkJ0Zew2KzYT4W-10" value="room: broadcast" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8f9fa;strokeColor=#01579B;dashed=1;" vertex="1" parent="AgoxpqBkJ0Zew2KzYT4W-1">
+          <mxGeometry x="220" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

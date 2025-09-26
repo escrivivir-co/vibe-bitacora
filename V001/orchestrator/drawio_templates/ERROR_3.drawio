@@ -1,0 +1,212 @@
+<mxfile host="app.diagrams.net" agent="GitHub Copilot" version="28.1.2">
+  <diagram name="Orchestrator Canvas (v003)" id="orchestrator-canvas-v003">
+    <mxGraphModel dx="3200" dy="2200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="title" value="State Machine MCP Driver - Orchestrator Architecture (Canvas)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="20" width="600" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Canvas: 1 big top + 3 bottom panels -->
+        <mxCell id="panel-top" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#9E9E9E;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="1500" height="740" as="geometry"/>
+        </mxCell>
+        <mxCell id="panel-bottom-left" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="840" width="470" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="panel-bottom-middle" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="840" width="470" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="panel-bottom-right" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=2;dashed=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="840" width="470" height="310" as="geometry"/>
+        </mxCell>
+
+        <!-- Labels for panels -->
+        <mxCell id="label-top" value="Arquitectura Principal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="80" width="300" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-bottom-left" value="MCP Servers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="850" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-bottom-middle" value="Orchestrator + Channels" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="850" width="240" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-bottom-right" value="Gamification UIs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="850" width="220" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Top panel contents -->
+        <mxCell id="launcher" value="MCPLauncherServer (Core)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#FFFAE3;strokeColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="130" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="orchestrator" value="Orchestrator (RxJS Bus)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="130" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketClient" value="Socket.IO Client (→ ws-server)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#E1F5FE;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="130" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="mcpAdapter" value="MCPDriverAdapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="130" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Channels in top panel -->
+        <mxCell id="channel-app" value="App Channel\n(AppMessage)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="230" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="channel-sys" value="Sys Channel\n(SysMessage)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFE0B2;strokeColor=#FF6D00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="230" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="channel-ui" value="UI Channel\n(UIMessage)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="230" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Message icons (from templates styling) -->
+        <mxCell id="msg-app" value="<font style=&quot;font-size: 9px;&quot;>AppChannelMessage</font>" style="shape=mxgraph.signs.tech.mail;html=1;pointerEvents=1;fillColor=#C8E6C9;strokeColor=#2E7D32;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="310" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg-sys" value="<font style=&quot;font-size: 9px;&quot;>SysChannelMessage</font>" style="shape=mxgraph.signs.tech.mail;html=1;pointerEvents=1;fillColor=#FFF9C4;strokeColor=#F57C00;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="310" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg-ui" value="<font style=&quot;font-size: 9px;&quot;>UIChannelMessage</font>" style="shape=mxgraph.signs.tech.mail;html=1;pointerEvents=1;fillColor=#B3E5FC;strokeColor=#0277BD;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="800" y="310" width="80" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges from orchestrator to channels/messages -->
+        <mxCell id="edge-orch-app" style="edgeStyle=orthogonalEdgeStyle;elbow=horizontal;strokeColor=#2D7600;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="orchestrator" target="channel-app">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-orch-sys" style="edgeStyle=orthogonalEdgeStyle;elbow=horizontal;strokeColor=#FF6D00;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="orchestrator" target="channel-sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-orch-ui" style="edgeStyle=orthogonalEdgeStyle;elbow=horizontal;strokeColor=#006EAF;dashed=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="orchestrator" target="channel-ui">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-app-msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2D7600;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="channel-app" target="msg-app">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-sys-msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#FF6D00;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="channel-sys" target="msg-sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-ui-msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#006EAF;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="channel-ui" target="msg-ui">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- AlephScript Clients (top panel) -->
+        <mxCell id="proserpina" value="ProserpinaBot\n(Socket.IO Client)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="420" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="orfeo" value="OrfeoBot\n(Socket.IO Client)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="420" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="euridice" value="EuridiceBot\n(Socket.IO Client)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="420" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="unity" value="Unity AlephScript\n(C# Socket.IO)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="420" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges: Clients <-> Orchestrator via Socket.IO -->
+        <mxCell id="edge-client-orch-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#01579B;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="proserpina" target="orchestrator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-client-orch-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#01579B;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="orfeo" target="orchestrator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-client-orch-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#01579B;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="euridice" target="orchestrator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-client-orch-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#01579B;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="unity" target="orchestrator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- RxJS Bots (top panel) -->
+        <mxCell id="apolo" value="ApoloBot\n(Strategic)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E8F5E9;strokeColor=#4CAF50;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="420" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dionisio" value="DionisioBot\n(Creative)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E8F5E9;strokeColor=#4CAF50;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="480" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="justice" value="JusticeBot\n(Regulatory)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E8F5E9;strokeColor=#4CAF50;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="420" width="140" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="userSim" value="UserSimulator\n(Testing)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E8F5E9;strokeColor=#4CAF50;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="480" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges: Bots <-> Channels (example to App) -->
+        <mxCell id="edge-bots-app-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#4CAF50;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="apolo" target="channel-app">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-bots-app-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#4CAF50;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="dionisio" target="channel-app">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-bots-app-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#4CAF50;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="justice" target="channel-sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-bots-app-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#4CAF50;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="userSim" target="channel-ui">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom-left: MCP Servers -->
+        <mxCell id="srv-devops" value="DevOpsServer (3003)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="900" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv-state" value="MCPStateMachineServer (3001)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="960" width="240" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv-wiki" value="MCPWikiBrowserServer (3002)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1020" width="240" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom-middle: Orchestrator + Channels details -->
+        <mxCell id="orch-mini" value="Orchestrator (RxJS)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="900" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="mini-app" value="app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="960" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="mini-sys" value="sys" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFE0B2;strokeColor=#FF6D00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="675" y="960" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="mini-ui" value="ui" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="960" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="mini-socket" value="Socket.IO\n(AlephScript Rooms)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#E1F5FE;strokeColor=#01579B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="825" y="950" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="mini-mcp" value="MCPDriverAdapter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="825" y="1010" width="180" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom-right: UIs -->
+        <mxCell id="ui-console" value="ConsoleGamificationUI" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="900" width="220" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui-web" value="HTML5GamificationUI" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="950" width="220" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui-manager" value="MultiUIGameManager" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="1000" width="220" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections: Launcher spawns servers and orchestrator -->
+        <mxCell id="edge-launch-orch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#4CAF50;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher" target="orchestrator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-launch-devops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#6A1B9A;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher" target="srv-devops">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-launch-state" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#6A1B9A;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher" target="srv-state">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-launch-wiki" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#6A1B9A;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="launcher" target="srv-wiki">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

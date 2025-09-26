@@ -1,0 +1,78 @@
+
+CARPETA: pvsnp\orchestrator\v001
+Avance y versiones últimas del archivo así como documentación.
+
+Tienes que hacer un fichero .drawio. 
+
+CARPETA: drawio_templates
+
+Para ello te aporto unas plantillas drawio con los elementos que podrás usar que se corresponden con los elementos reales de #file:state-machine-mcp-driver; así como ejemplos de ficheros que no cargan (ERROR) como que si (CORRECTO). Por tanto fase 1: estudiar plantillas drawio. Fase 2: estudiar la codebase. Fase 3: planear como crear el archivo drawio. Fase 4: hacerlo.
+
+Tienes que identificar el #file:MCPLauncherServer.ts a si como los #AlephScriptClient como proserpina, orfeo o euridice. Son clientes socket.io. Encontrar los bot que se comunican con rxjs con el #file:orchestration como apolo, dionisio, justice o user simulator.
+
+Los tipos de mensaje #file:ConversationMessage.ts de #file:app-channel-agent.ts , #file:sys-channel-agent.ts y #file:ui-channel-agent.ts .
+
+Además identificar los elementos #file:GamificationUI.ts presentes como la Consola o la vista HTML.
+
+Y los servidores base como #file:MCPStateMachineServer.ts y #file:DevOpsServerImpl.ts. Así como los de utilidad: #file:MCPWikiBrowserServer.ts .
+
+¡Adelante con la tarea!
+
+Te adjunto el #file:buggy_v002.drawio tras los cambios. Sigue a partir de el. Te he puesto tambien un pantallzo #file:buggy_chart_v002.png .
+Fiajte en el archivo #file:CanvasTemplate.drawio como pone 4 cuadros, uno grande y tres en el pie.
+Fijate en el archivo #file:OrchestratorTemplate.drawio como hay por colores y para los 3 canales app, sys y ui. Flechas tipo para mensaje de entrada y salida.
+
+
+Fase 1: Estudiar plantillas drawio
+
+Veo que ya tengo las plantillas. Ahora voy a analizar la codebase para entender todos los componentes.
+
+Fase 2: Estudiar la codebase
+Fase 3: Planear la creación del archivo drawio
+Basándome en el análisis de la plantilla y la codebase, voy a crear un diagrama completo que muestre toda la arquitectura del sistema. He identificado:
+
+Elementos principales:
+MCPLauncherServer - Servidor central que lanza otros servidores
+AlephScriptClients - Socket.io clients (proserpina, orfeo, euridice)
+Bots RxJS - apolo, dionisio, justice, user simulator con orchestration
+Channels - app-channel-agent, sys-channel-agent, ui-channel-agent
+GamificationUI - Console y HTML5 views
+MCP Servers - MCPStateMachineServer, DevOpsServer, MCPWikiBrowserServer
+Fase 4: Crear el archivo drawio
+Created ARCHITECTURE_DIAGRAM.drawio
+
+¡Perfecto! He creado un diagrama completo de la arquitectura del sistema state-machine-mcp-driver. El archivo ARCHITECTURE_DIAGRAM.drawio incluye:
+
+🎯 Elementos Identificados y Representados:
+1. MCPLauncherServer (Core Central)
+Servidor principal que gestiona todo el ecosistema
+Spawns y administra otros servidores
+Puerto 3050
+2. RxJS Orchestrator + Channel System
+Orchestrator: Bus de comunicación reactivo central
+AppChannelAgent (state-manager): Lógica de negocio
+SysChannelAgent (system-monitor): Eventos del sistema
+UIChannelAgent (ui-controller): Interacciones de usuario
+3. AlephScript Clients (Socket.IO)
+ProserpinaBot: DevOps operations
+OrfeoBot: Music & Audio processing
+EuridiceBot: Data & Analytics
+Unity AlephScript: Game integration
+4. Gamification UI Systems
+GamificationUI: Clase base con RxJS streams
+ConsoleGamificationUI: Interfaz de consola
+HTML5GamificationUI: Interfaz web con Server-Sent Events
+MultiUIGameManager: Coordinador de múltiples UIs
+5. RxJS Channel Bots
+ApoloBot: Strategic Agent
+DionisioBot: Creative Agent
+JusticeBot: Regulatory Agent
+UserSimulator: Testing Agent
+6. MCP Servers Ecosystem
+DevOpsServer: Automatización DevOps (puerto 3003)
+MCPStateMachineServer: X+1 MCP Machine (puerto 3001)
+MCPWikiBrowserServer: Navegación Wikipedia (puerto 3002)
+MCPDriverAdapter: Capa de comunicación MCP
+Runtime: Motor de juego central
+🔧 Características del Diagrama:
+✅ Colores diferenciados por tipo de componente ✅ Conexiones que muestran flujo de datos ✅ Leyenda explicativa completa ✅ Información técnica detallada ✅ Stack tecnológico documentado ✅ Puertos y configuración de despliegue
