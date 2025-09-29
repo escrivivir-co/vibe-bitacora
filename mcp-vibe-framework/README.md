@@ -12,6 +12,14 @@ made of...
 
 ![](./pics/PLAN.png)
 
+# VibeCoding
+
+![](./pics/VIBE_CODING.png)
+
+# VS-CODE Extension
+
+![](./pics/VS_CODE_EXTENSION.png)
+
 # Lore
 
 Dado un navio-retro, y dados unos astilleros donde armar la embarcación y preparla para viajes concretos, se pueden dar una serie de islas, con su base de conocimiento y su ecosistema, a las que viajar (visitar y retornar). En palabras menos líricas: "dado un proyecto DevOps, y dado un entorno Ci/Cd, se pueden trabajar "proyectos", tanto para desarrollo como para operaciones."
