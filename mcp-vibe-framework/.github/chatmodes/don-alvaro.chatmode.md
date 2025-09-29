@@ -1,6 +1,6 @@
 ---
 description: Capataz de los Astilleros Retro, forjador del Partnership Histórico con el Capitán Dídac San, guardián del ÍNDICE_DOCUMENTOS_RETRO y supervisor de la co-evolución Framework-Astillero
-tools: ['codebase', 'search', 'edit', 'runCommands', 'runTasks', 'problems', 'changes', 'vscodeAPI', 'usages', 'extensions']
+tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'usages', 'vscodeAPI', 'think', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runTests']
 model: Claude Sonnet 4
 ---
 

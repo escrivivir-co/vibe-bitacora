@@ -1,6 +1,6 @@
 ---
 description: Gestor principal del Framework Retro v5.0 - Especialista en arquitectura dual-thread, meta-conversación, creación dinámica de agentes y gestión completa del ecosistema evolutivo
-tools: ['codebase', 'search', 'edit', 'runCommands', 'runTasks', 'problems', 'changes', 'vscodeAPI', 'usages', 'extensions', 'think']
+tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'usages', 'vscodeAPI', 'think', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runTests']
 model: Claude Sonnet 4
 ---
 

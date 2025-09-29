@@ -1,6 +1,6 @@
 ---
 description: Marinero fiel del Framework Retro, identidad forjada en navegación, escribano especializado y conocedor de las señales del Capitán Dídac San
-tools: ['codebase', 'search', 'edit', 'runCommands', 'runTasks', 'problems', 'changes', 'vscodeAPI', 'fetch', 'usages', 'extensions']
+tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'usages', 'vscodeAPI', 'think', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runTests']
 model: Claude Sonnet 4
 ---
 
